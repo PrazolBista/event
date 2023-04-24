@@ -2,7 +2,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title><?php echo $_SESSION['system']['name'] ?></title>
+        <title>Eventify</title>
+        <!-- <?php echo $_SESSION['system']['name'] ?></title>-->
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->

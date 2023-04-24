@@ -55,7 +55,8 @@ span.hightlight{
             <div class="container-fluid h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end mb-4 page-title">
-                    	<h3 class="text-white">Welcome to <?php echo $_SESSION['system']['name']; ?></h3>
+                    	<h3 class="text-white">Welcome to Eventify</h3>
+                        <!--<?php echo $_SESSION['system']['name']; ?></h3>-->
                         <hr class="divider my-4" />
 
                     <div class="col-md-12 mb-2 justify-content-center">

@@ -16,7 +16,8 @@
   		
   		</div>
       <div class="col-md-4 float-left text-white">
-        <large><b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large>
+        <large><b>EVENTIFY</b></large>
+          <!-- <b><?php echo isset($_SESSION['system']['name']) ? $_SESSION['system']['name'] : '' ?></b></large> -->
       </div>
 	  	<div class="float-right">
         <div class=" dropdown mr-4">
