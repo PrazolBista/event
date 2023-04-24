@@ -16,7 +16,7 @@ ob_end_flush();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Event Management System</title>
+  <title>Eventify</title>
  	
 
 <?php include('./header.php'); ?>
