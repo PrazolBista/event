@@ -68,9 +68,9 @@ Extract the downloaded file to the XAMPP htdocs folder.
 
 - Open a web browser and go to http://localhost/phpmyadmin/.
 
-- Create a new database called event_management_system.
+- Create a new database called eventdb.sql.
 
-- Import the database file event_management_system.sql located in the db folder.
+- Import the database file eventdb.sql located in the database folder.
 
 - Open a web browser and go to http://localhost/event/ to run the project.
 
