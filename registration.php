@@ -1,25 +1,31 @@
-<div class="container-fluid">
-	<form action="" id="manage-register">
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<div class="container-fluid">
+	<form id="manage-register">
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id :'' ?>">
 		<input type="hidden" name="event_id" value="<?php echo isset($_GET['event_id']) ? $_GET['event_id'] :'' ?>">
 		<div class="form-group">
-			<label for="" class="control-label">Full Name</label>
-			<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
+			<label for="name" class="control-label">Full Name *</label>
+			<input type="text" id="name" name="name" placeholder="Enter FullName" required data-parsley-trigger="keyup"  class="form-control">
+
+			<!-- <input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required> -->
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Address</label>
-			<textarea cols="30" rows = "2" required="" name="address" class="form-control"><?php echo isset($address) ? $address :'' ?></textarea>
+			<label for="address" class="control-label">Address *</label>
+			<textarea cols="30" rows = "2" required name="address" class="form-control"><?php echo isset($address) ? $address :'' ?></textarea>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Email</label>
+			<label for="email" class="control-label">Email *</label>
 			<input type="email" class="form-control" name="email"  value="<?php echo isset($email) ? $email :'' ?>" required>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Contact #</label>
+			<label for="contact" class="control-label">Contact *</label>
 			<input type="text" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required>
 		</div>
 	</form>
-</div>
+	</div>
+</body>
 <script>
 	 $('.datetimepicker').datetimepicker({
 	      format:'Y/m/d H:i',
@@ -48,3 +54,4 @@
 		})
 	})
 </script>
+</html>

@@ -32,7 +32,7 @@
 							</colgroup>
 							<thead>
 								<tr>
-									<th class="text-center">#</th>
+									<th class="text-center">S.No</th>
 									<th class="">Schedule</th>
 									<th class="">Venue</th>
 									<th class="">Event Info.</th>
@@ -68,10 +68,17 @@
 										 <p class="truncate"><?php echo strip_tags($desc) ?></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-warning view_event" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
-										<button class="btn btn-sm btn-outline-success edit_event" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-sm btn-outline-danger delete_event" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
-									</td>
+											<button class="btn btn-sm btn-outline-success edit_event" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+											<button class="btn btn-sm btn-outline-danger delete_event" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+											<button class="btn btn-sm btn-outline-warning view_event" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
+										<!-- <?php if($row['type']  === 1) { ?>
+											<button class="btn btn-sm btn-outline-success edit_event" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
+											<button class="btn btn-sm btn-outline-danger delete_event" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+											<button class="btn btn-sm btn-outline-warning view_event" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
+												<?php } else { ?>
+													<button class="btn btn-sm btn-outline-warning view_event" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
+												<?php } ?>
+									</td> -->
 								</tr>
 								<?php endwhile; ?>
 							</tbody>

@@ -26,7 +26,8 @@ if($qry->num_rows > 0){
 				</div>
 				<div class="form-group">
 					<label for="about" class="control-label">About Content</label>
-					<textarea name="about" class="text-jqte"><?php echo isset($meta['about_content']) ? $meta['about_content'] : '' ?></textarea>
+					<textarea name="about" class="text-jqte"><?php echo isset($meta['about_content']) ? '' : '' ?></textarea>
+					<!-- <input type="text" class="form-control" id="about_content" name="about_content" value="<?php echo isset($meta['about_content']) ? $meta['about_content'] : '' ?>" required> -->
 
 				</div>
 				<div class="form-group">

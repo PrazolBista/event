@@ -12,7 +12,7 @@ foreach($user->fetch_array() as $k =>$v){
 	<div id="msg"></div>
 	
 	<form action="" id="manage-user">	
-		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
+		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: 2 ?>">
 		<div class="form-group">
 			<label for="name">Name</label>
 			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
@@ -51,10 +51,10 @@ foreach($user->fetch_array() as $k =>$v){
 			method:'POST',
 			data:$(this).serialize(),
 			success:function(resp){
-				if(resp ==1 || resp == 2)){
+				if(resp ==1 || resp == 2){
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
-						location.reload()
+						location.reload();
 					},1500)
 				}else{
 					$('#msg').html('<div class="alert alert-danger">Username already exist</div>')

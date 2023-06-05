@@ -4,7 +4,7 @@
 		<input type="hidden" name="venue_id" value="<?php echo isset($_GET['venue_id']) ? $_GET['venue_id'] :'' ?>">
 		<div class="form-group">
 			<label for="" class="control-label">Full Name</label>
-			<input type="text" class="form-control" name="name"  value="<?php echo isset($name) ? $name :'' ?>" required>
+			<input type="text"  name="name"  value="<?php echo isset($name) ? $name :'' ?>" required class="form-control">
 		</div>
 		<div class="form-group">
 			<label for="" class="control-label">Address</label>
@@ -15,7 +15,7 @@
 			<input type="email" class="form-control" name="email"  value="<?php echo isset($email) ? $email :'' ?>" required>
 		</div>
 		<div class="form-group">
-			<label for="" class="control-label">Contact #</label>
+			<label for="" class="control-label">Contact *</label>
 			<input type="text" class="form-control" name="contact"  value="<?php echo isset($contact) ? $contact :'' ?>" required>
 		</div>
 		<div class="form-group">

@@ -32,7 +32,7 @@
 							</colgroup> -->
 							<thead>
 								<tr>
-									<th class="text-center">#</th>
+									<th class="text-center">S No.</th>
 									<th class="">Venue</th>
 									<th class="">Address</th>
 									<th class="">Description</th>
@@ -105,7 +105,7 @@
 	})
 	
 	function delete_venue($id){
-		stvenue_load()
+		// stvenue_load()
 		$.ajax({
 			url:'ajax.php?action=delete_venue',
 			method:'POST',

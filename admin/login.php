@@ -68,8 +68,59 @@ header("location:index.php?page=home");
     font-size: 8rem;
     padding: .5em 0.8em;
     color: #000000b3;
-}
+	}
+	.captcha
+	{
+		width: 50%;
+		background: gray;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 700;
+	}
+
 </style>
+<?php
+include('db_connect.php');
+$rand = rand(9999, 1000);
+if(isset($_REQUEST['Login']))
+{
+	$username= $_REQUEST['username'];
+	$password= $_REQUEST['password'];
+	$captcha= $_REQUEST['captcha'];
+	$captcharandom= $_REQUEST['captcha-rand'];
+
+
+	if($captcha!=$captcharandom)
+	{?>
+		<script type="text/javascript">
+			alert("Invalid Captcha ");
+		</script>
+	<?php
+	}
+	else
+	{
+		$select_query = mysqli_query($conn, "select * from users where username='$username' and password='$password'");
+		$result = mysqli_num_rows($select_query);
+		if($result>0)
+		{?>
+			<script type="text/javascript">
+				alert("Login Success");
+			</script>
+		<?php
+		}
+		else
+		{?>
+			<script type="text/javascript">
+				alert("Invalid email or password");
+			</script>
+		<?php
+		}
+
+	}
+}
+
+
+?>
 
 <body>
 
@@ -92,12 +143,27 @@ header("location:index.php?page=home");
   					<form id="login-form" >
   						<div class="form-group">
   							<label for="username" class="control-label text-success">Username</label>
-  							<input type="text" id="username" name="username" class="form-control">
+  							<input type="text" id="username" name="username" placeholder="Enter Username" required data-parsley-trigger="keyup"  class="form-control">
   						</div>
   						<div class="form-group">
   							<label for="password" class="control-label">Password</label>
-  							<input type="password" id="password" name="password" class="form-control">
+  							<input type="password" id="password" name="password" placeholder="Enter Password" required data-parsley-trigger="keyup" class="form-control">
   						</div>
+						<div>
+							<div class="form-group">
+  							<label for="captcha">Captcha</label>
+  							<input type="text" id="captcha" name="captcha" placeholder="Enter Captcha" required data-parsley-trigger="keyup" class="form-control" />
+							<input type="hidden" name="captcha-rand" value="<?php echo $rand; ?>"
+							</div>	
+						  <div class="form-group">
+  							<label for="captcha">Captcha Code</label>
+							<div class ="captcha"> 
+								<?php echo $rand; ?> 
+							</div>
+						</div>
+						<!-- <div class="form-group">
+							<input type="submit" id="login" name="login" value="Login" class="btn btn-success" >
+						</div> -->
   						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-success">Login</button></center>
   					</form>
   				</div>

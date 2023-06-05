@@ -45,7 +45,7 @@
 						</div>	
 						<table class="table table-bordered">
 							<thead>
-								<th class="text-center">#</th>
+								<th class="text-center">S No.</th>
 								<th class="text-center">Event</th>
 								<th class="text-center">Schedule</th>
 								<th class="text-center">Event Type</th>

@@ -1637,7 +1637,7 @@ a.nav-item {
     font-weight: 600;
 }
 a.nav-item:hover, .nav-item.active {
-    background-color: #000000ad;
+    background-color: #252525ad;
     color: #fffafa;
 }
 main#view-panel{
